@@ -45,7 +45,44 @@ public class SuperAwesomeChartViewController implements Initializable
         beeCount2017.setName("2017");
         beeCount2018.setName("2018");
         
+        //initialize the graph with months so that any new data will go in the
+        //desired order
+        beeCount2017.getData().add(new XYChart.Data("January", 0));
+        beeCount2017.getData().add(new XYChart.Data("February", 0));
+        beeCount2017.getData().add(new XYChart.Data("March", 0));
+        beeCount2017.getData().add(new XYChart.Data("April", 0));
+        beeCount2017.getData().add(new XYChart.Data("May", 0));
+        beeCount2017.getData().add(new XYChart.Data("June", 0));
+        beeCount2017.getData().add(new XYChart.Data("July", 0));
+        beeCount2017.getData().add(new XYChart.Data("August", 0));
         
+        //add data to the graphs
+        getDataForGraph();
+        
+        barChart.getData().addAll(beeCount2017);
+        barChart.getData().addAll(beeCount2018);
     }    
+    
+    /**
+     * This method will typically get data from a database or other data input
+     * such as a JSON file
+     */
+    public void getDataForGraph()
+    {
+        beeCount2017.getData().add(new XYChart.Data("April", 1500));
+        beeCount2017.getData().add(new XYChart.Data("August", 1650));
+        beeCount2017.getData().add(new XYChart.Data("February", 1100));
+        beeCount2017.getData().add(new XYChart.Data("January", 1000));
+        beeCount2017.getData().add(new XYChart.Data("June", 1800));
+        beeCount2017.getData().add(new XYChart.Data("July", 1800));
+        beeCount2017.getData().add(new XYChart.Data("March", 1200));      
+        beeCount2017.getData().add(new XYChart.Data("May", 1700));
+       
+        
+        
+        beeCount2018.getData().add(new XYChart.Data("January", 800));
+        beeCount2018.getData().add(new XYChart.Data("February", 900));
+        beeCount2018.getData().add(new XYChart.Data("March", 1000));
+    }
     
 }

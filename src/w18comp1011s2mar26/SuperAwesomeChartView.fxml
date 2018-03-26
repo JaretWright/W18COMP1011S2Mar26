@@ -1,25 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.net.URL?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.chart.BarChart?>
 <?import javafx.scene.chart.CategoryAxis?>
 <?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 
 <AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="w18comp1011s2mar26.SuperAwesomeChartViewController">
     <stylesheets>
         <URL value="@superawesomechartview.css" />
     </stylesheets>
    <children>
-      <BarChart fx:id="barChart" layoutX="40.0" layoutY="100.0" prefHeight="400.0" prefWidth="721.0">
-        <xAxis>
-          <CategoryAxis fx:id="months" side="BOTTOM" />
-        </xAxis>
-        <yAxis>
-          <NumberAxis fx:id="bumblebees" side="LEFT" />
-        </yAxis>
-      </BarChart>
-      <Label layoutX="287.0" layoutY="41.0" text="BumbleBees estimated population" />
+      <VBox alignment="CENTER" layoutX="287.0" layoutY="41.0" prefHeight="600.0" prefWidth="1008.0" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label styleClass="headerLabel" text="BumbleBees estimated population" />
+            <BarChart fx:id="barChart" prefHeight="400.0" prefWidth="721.0">
+              <xAxis>
+                <CategoryAxis fx:id="months" side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis fx:id="bumblebees" side="LEFT" />
+              </yAxis>
+            </BarChart>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
    </children>
 </AnchorPane>
